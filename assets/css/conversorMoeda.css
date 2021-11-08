@@ -1,0 +1,24 @@
+.conversor-moeda__formulario {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+input, select {
+    display: block;
+}
+
+.conversor-moeda__input {
+    padding: .8rem;
+}
+
+.conversor-moeda__resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.conversor-moeda__base, .conversor-moeda__conversao {
+    font-size: 2rem;
+}
