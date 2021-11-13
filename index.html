@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenny - Conversor</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/navbar.css">
@@ -19,7 +25,7 @@
     <nav class="navbar">
         <div class="container">
             <a class="navbar__link" href="#">
-                <img class="navbar__logo" src="" alt="">
+                <i class="bi bi-coin"></i>
                 Zenny
             </a>
 
@@ -31,36 +37,64 @@
     </nav>
 
     <main>
-        <section class="conversor-moeda container">
-            <form action="" class="conversor-moeda__formulario">
-                <label for="valor">Valor
-                    <input type="text" name="valor" id="" class="conversor-moeda__input" data-valor="base" placeholder="Valor">
-                </label>
+        <section class="conversor-moeda">
+            <div class="container">
+                <form action="" class="conversor-moeda__formulario">
+                    <label for="valor">Valor
+                        <input type="text" name="valor" id="" class="conversor-moeda__input" data-valor="base"
+                            placeholder="Valor">
+                    </label>
 
-                <label for="daMoeda">Da moeda
-                    <select name="daMoeda" id="" class="conversor-moeda__input" data-moeda="moeda1">
-                        <option value="USD">Dólar dos Estados Unidos | USD</option>
-                        <option value="EUR">Euro | EUR</option>
-                        <option value="BRL">Real | BRL</option>
-                    </select>
-                </label>
+                    <label for="daMoeda">Converter de
+                        <select name="daMoeda" id="" class="conversor-moeda__input" data-moeda="moeda1">
+                            <option value="USD">Dólar dos Estados Unidos | USD</option>
+                            <option value="CAD">Dólar Canadense | CAD</option>
+                            <option value="JPY">Iene Japonês | JPY</option>
+                            <option value="CNY">Iuane Chinês | CNY</option>
+                            <option value="CLP">Peso Chileno | CLP</option>
+                            <option value="EUR">Euro | EUR</option>
+                            <option value="BRL">Real | BRL</option>
+                        </select>
+                    </label>
 
-                <input type="button" value="Inverter" name="botaoInverter" class="conversor-moeda__botao" data-botao="inverter">
+                    <label for="conversor-moeda__botao" style="color: transparent;"> Botão
+                        <input type="button" value="Inverter" name="botaoInverter" class="conversor-moeda__botao"
+                            data-botao="inverter">
+                    </label>
 
-                <label for="paraMoeda">Para a moeda
-                    <select name="paraMoeda" id="" class="conversor-moeda__input" data-moeda="moeda2">
-                        <option value="BRL">Real | BRL</option>
-                        <option value="EUR">Euro | EUR</option>
-                        <option value="USD">Dólar dos Estados Unidos | USD</option>
-                    </select>
-                </label>
-            </form>
-
-            <div class="conversor-moeda__resultados">
-                <input type="text" class="conversor-moeda__base" data-valor="entrada" placeholder="0,00">
-                <input type="text" class="conversor-moeda__conversao" data-valor="saida" placeholder="0,00">
+                    <label for="paraMoeda">Para
+                        <select name="paraMoeda" id="" class="conversor-moeda__input" data-moeda="moeda2">
+                            <option value="BRL">Real | BRL</option>
+                            <option value="EUR">Euro | EUR</option>
+                            <option value="CLP">Peso Chileno | CLP</option>
+                            <option value="JPY">Iene Japonês | JPY</option>
+                            <option value="CNY">Iuane Chinês | CNY</option>
+                            <option value="CAD">Dólar Canadense | CAD</option>
+                            <option value="USD">Dólar dos Estados Unidos | USD</option>
+                        </select>
+                    </label>
+                </form>
             </div>
         </section>
+
+        <section class="conversor-resultados">
+            <div class="container">
+                <h3 class="conversor-resultados__titulos">Resultado da conversão</h3>
+
+                <div class="conversor-moeda__resultados">
+                    <label for="valorEntrada" class="conversor-moeda__base--label">Valor unitário
+                        <input type="text" name="valorEntrada" class="conversor-moeda__base" data-valor="entrada" placeholder="0,00"
+                            readonly>
+                    </label>
+
+                    <label for="valorSaida" class="conversor-moeda__conversao--label">Valor total
+                        <input type="text" name="valorSaida" class="conversor-moeda__conversao" data-valor="saida" placeholder="0,00"
+                            readonly>
+                    </label>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -68,7 +102,7 @@
 
         </section>
     </footer>
-    
+
     <script type="module" src="./assets/js/app.js"></script>
 </body>
 

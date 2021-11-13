@@ -1,24 +1,56 @@
+.conversor-moeda {
+    background-color: rgb(194, 194, 194);
+    padding: 3rem 0;
+}
+
 .conversor-moeda__formulario {
     display: flex;
-    justify-content: center;
-    margin: 1.5rem 0;
+    align-items: center;
 }
 
 input, select {
     display: block;
 }
 
-.conversor-moeda__input {
-    padding: .8rem;
+label:first-of-type {
+    margin-left: 0;
+}
+
+label {
+    padding: 1rem 0;
+    margin-left: 1.5rem;
+}
+
+.conversor-moeda__botao {
+    background-color: rgb(255, 255, 65);
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.conversor-moeda__botao:hover {
+    background-color: rgb(236, 236, 59);
+    transition: .8s;
+}
+
+.conversor-moeda__input, .conversor-moeda__botao {
+    padding: 1rem;
+    margin-top: .5rem;
 }
 
 .conversor-moeda__resultados {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 1.5rem 0;
 }
 
+.conversor-resultados__titulos {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
 .conversor-moeda__base, .conversor-moeda__conversao {
     font-size: 2rem;
+    margin-top: .5rem;
 }
